@@ -15,7 +15,7 @@ pg_dump --format=custom \
         > db.dump
 
 timestamp=$(date +"%Y-%m-%dT%H:%M:%S")
-s3_uri_base="s3://${S3_BUCKET}/${S3_PREFIX}/${POSTGRES_DATABASE}_${timestamp}.dump"
+s3_uri_base="s3://${S3_BUCKET}/${S3_PREFIX}/${POSTGRES_DATABASE}.dump"
 
 if [ -n "$PASSPHRASE" ]; then
   echo "Encrypting backup..."
